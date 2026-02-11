@@ -11,24 +11,7 @@ pip install -r requirements.txt
 ```
 
 - **Dataset location and structure**  
-By default the code expects your dataset at:
-
-```text
-C:\Users\Charan s\Desktop\Dataset
-    Glass\
-        image1.jpg
-        image2.jpg
-        ...
-    Metal\
-        image1.jpg
-        ...
-    Paper\
-        image1.jpg
-        ...
-    Plastic\
-        image1.jpg
-        ...
-```
+Provide **your own dataset path** (a folder that contains one subfolder per class, e.g. `Glass`, `Metal`, `Paper`, `Plastic`) and make sure the code points to it.
 
 You can add more classes by creating additional folders inside `Dataset`.  
 If your dataset is in a different location, update:
@@ -94,4 +77,5 @@ python raspberry_detect.py
 - `object_detection_model.h5`: Trained model
 - `label_encoder_classes.npy`: Encoded label classes
 - `label_mapping.npy`: Mapping from numeric class indices to human-readable names (used by `detect.py` / `raspberry_detect.py`)
+
 - `training_history.png`: Training accuracy and loss plots
